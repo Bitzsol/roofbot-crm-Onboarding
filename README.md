@@ -209,7 +209,7 @@ You will see the following three integration cards:
 
 ---
 
-### 🔗 A. Google Calendar Integration
+###  A. Google Calendar Integration
 
 This allows Roofbot CRM to automatically sync appointments created manually or through the chatbot.
 
@@ -271,6 +271,28 @@ You must configure your Twilio Messaging Service:
 
 https://github.com/user-attachments/assets/4c77ec32-c87b-445f-8ecf-b8e309f6c85c
 
+### 📞 B(a). Twilio Call Integration
+You must configure your Twilio Call configuration to recieve incoming calls from leads:
+
+1. **Voice Configuration**  
+   - Go to your Twilio Dashboard → Phone numbers → Active number  
+   - Click **Your number which you also added in messaging services**  
+2. **You will see Voice configuration**  
+   - Configure with Webhook, TwiML Bin, Function, Studio Flow, Proxy Service 
+3. **Set URL's**  
+   - A call Comes In → select webhook 
+     - ** A call Comes In (incoming calls)** → Used to receive incoming calls from Leads  
+     - **Call status changes (Delivery Status)**
+     - also make sure to set **HTTP** to HTTP POST
+
+> Both URLs will be shown clearly inside CRM on the Twilio integration card when you click save after entering Sid and token. Just copy/paste them in url's.
+
+### See demo:
+
+
+
+https://github.com/user-attachments/assets/8076adfc-b0f6-4fdd-881d-eac2b9a9aed0
+
 
 
 ---
@@ -283,7 +305,8 @@ This enables the chatbot that:
 - Create lead
 - Books appointments  
 - Performs natural language conversations  
-- Automatically updates lead details  
+- Automatically updates lead details
+- Create Appointments
 
 **Steps to Integrate OpenAi**
 
@@ -297,9 +320,33 @@ This enables the chatbot that:
 - Automatic lead creation via chatbot  
 - Automatic appointment booking  
 - Smart conversation  
-- Lead summarization (AI-powered)  
+- Lead summarization (AI-powered)
+- Chat Summarization (AI-powered)
 
 ---
+---
+
+###  D. Outlook Calendar Integration
+
+This allows Roofbot CRM to automatically sync appointments created manually or through the chatbot.
+
+**Steps to Connect Outlook Calendar**
+
+1. Click **Connect Outlook Calendar** in integration page.  
+2. You will be redirected to Microsoft’s Secure OAuth page.  
+3. Select your Microsoft outlook account.  
+4. Grant access to your Calendar.  
+5. You’ll be redirected back to the CRM with integration success.
+
+**What Outlook Integration Enables**
+
+- Auto-sync appointments created inside CRM.  
+- Auto-sync appointments created by the chatbot.  
+- View events directly in your Outlook Calendar.  
+- Maintain a unified schedule across CRM + Google Calendar.  
+
+---
+
 
 ### 🧩 What Happens After All 3 Integrations Are Connected
 
@@ -309,10 +356,12 @@ Your CRM will be fully automated:
    - CRM sends an automatic SMS  
    - Lead is stored
    - Two way messaging with lead
-   - Message status update 
+   - Message status update
+   - recieve incoming calls on your twilio number
 
 2. **When appointments are created**  
-   - Automatically sync to Google Calendar  
+   - Automatically sync to Google Calendar
+   - Automatically sync to outlook Calendar
    - Auto-reminder sent 24 hours before via SMS  
 
 3. **When customers reply via SMS**  

@@ -197,7 +197,7 @@ https://github.com/user-attachments/assets/24c272e6-d539-4399-9c9f-38e4f2ba6a10
 
 # 9. Integration Management 
 
-The **Integrations** module allows you to connect essential third-party services so the CRM can send SMS, sync your appointments to your Google Calendar, and enable the AI chatbot.
+The **Integrations** module allows you to connect essential third-party services so the CRM can send SMS,emails, sync your appointments to your Google Calendar and outlook calender, and enable the AI chatbot.
 
 ### Accessing Integrations
 
@@ -205,7 +205,7 @@ The **Integrations** module allows you to connect essential third-party services
 2. Select **My Account**.  
 3. Go to **Integrations**.  
 
-You will see the following three integration cards:
+You will see the following five integration cards:
 
 ---
 
@@ -346,9 +346,49 @@ This allows Roofbot CRM to automatically sync appointments created manually or t
 - Maintain a unified schedule across CRM + Google Calendar.  
 
 ---
+---
+
+###  E. SendGrid Integration
+
+This allows Roofbot CRM to automatically send emails to leads for followups and reminders.
+**Steps to Connect SendGrid**
+
+1. Click **Connect SendGrid** in integration page.  
+2. You will see a TextBox to enter APi key.  
+3. Add your APi key to send automatic emails for followups and reminders to leads.  
+4. How to get the APi key:  
+   4(1).You will see an email section in sidebar of Twilio console,click it and go to sendgrid.
+   4(2).Or you can directly open https://login.sendgrid.com/login/identifier
+To get a SendGrid API key, follow these steps (it's free to start with 100 emails/day):
+
+Sign Up for SendGrid:
+Go to https://sendgrid.com and click "Start for Free" or "Sign Up".
+Enter your email, create a password, and fill in basic info (name, company).
+Confirm your email via the verification link sent to you.
+
+Verify Your Sender Identity (Required before sending emails):
+Log in to your SendGrid dashboard.
+Go to Settings > Sender Authentication.
+Choose Single Sender Verification (easiest for testing): Enter an email you own (e.g., no-reply@yourdomain.com) and verify it by clicking a link sent to that email.
 
 
-### 🧩 What Happens After All 3 Integrations Are Connected
+Generate API Key:
+In dashboard, go to Settings > API Keys.
+Click Create API Key.
+Name it (e.g., "App Key").
+Select permissions: Full Access (for Mail Send) or restricted to "Mail Send" only.
+Click Create & View — copy the key (starts with "SG."). Save it securely — you won't see it again.
+
+Also see the demo for getting APi key and setting sender email.
+
+
+
+https://github.com/user-attachments/assets/c3e19d19-a0ef-4521-b99c-eff183f1a9ad
+
+---
+
+
+### 🧩 What Happens After All 5 Integrations Are Connected
 
 Your CRM will be fully automated:
 
